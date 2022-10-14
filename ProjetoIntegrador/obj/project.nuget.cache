@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QIRIsW1PdmKqWkSCSEK1Nm+8Ot7yFzzrPR2UkEu+NKDP3lGT5O2N6m4Gq2d74q6+cO+rsdaqXwZcsUogQbNbMQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gomes\\Documents\\Downloads\\ProjetoIntegrador\\ProjetoIntegrador.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gomes\\.nuget\\packages\\mysqlconnector\\2.1.13\\mysqlconnector.2.1.13.nupkg.sha512",
+    "C:\\Users\\gomes\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

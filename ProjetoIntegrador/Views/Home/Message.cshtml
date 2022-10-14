@@ -1,0 +1,42 @@
+@model List<Faleconosco>
+<div class="iconbar">
+	<a asp-area="" asp-controller="Home" asp-action="Index"><img width ="35px" height="35px" src="~/home.png">  Home</a>
+	<a asp-area="" asp-controller="Home" asp-action="Pavao"><img width ="35px" height="35px" src="~/pavao.png">  Pavões</a>
+	<a asp-area="" asp-controller="Home" asp-action="Ganso" ><img width ="35px" height="35px" src="~/goose.png">  Gansos</a>
+	<a asp-area="" asp-controller="Home" asp-action="Garnize"><img width ="35px" height="35px" src="~/rooster.png">  Garnizés</a>
+	<a asp-area="" asp-controller="Home" asp-action="FaleConosco" ><img width ="35px" height="35px" src="~/message.png">  Fale Conosco</a>
+    <a asp-area="" asp-controller="Home" asp-action="Message" class="active"><img width ="35px" height="35px" src="~/sent.png"> Recebidas</a>
+</div>
+
+<br><br><br><center><h1 class="heitor">Mensagem recebidas</h1></center><br>
+<center>
+
+	<table>
+	
+		<thead>
+
+			<tr>
+
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Mensagem</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			
+			
+				@foreach (Faleconosco message  in Model)
+				{
+					<tr>
+						<td>@message.nome</td>
+						<td>@message.email</td>
+						<td>@message.mensagem</td>
+					</tr>	
+				}
+			
+		
+		</tbody>
+	</table>
+
+</center>

@@ -1,0 +1,35 @@
+@model Faleconosco
+<div class="iconbar">
+	<a asp-area="" asp-controller="Home" asp-action="Index"><img width ="35px" height="35px" src="~/home.png">  Home</a>
+	<a asp-area="" asp-controller="Home" asp-action="Pavao"><img width ="35px" height="35px" src="~/pavao.png">  Pavões</a>
+	<a asp-area="" asp-controller="Home" asp-action="Ganso" ><img width ="35px" height="35px" src="~/goose.png">  Gansos</a>
+	<a asp-area="" asp-controller="Home" asp-action="Garnize"><img width ="35px" height="35px" src="~/rooster.png">  Garnizés</a>
+	<a asp-area="" asp-controller="Home" asp-action="FaleConosco" class="active"><img width ="35px" height="35px" src="~/message.png">  Fale Conosco</a>
+    <a asp-area="" asp-controller="Home" asp-action="Message"><img width ="35px" height="35px" src="~/sent.png"> Recebidas</a>
+</div>
+
+<br><br><br><center><h1 class="heitor12">Fale Conosco</h1></center><br>
+
+
+<form method="Post">
+
+    <center><span><label asp-for="nome">
+        Nome:
+    </label>
+    
+    <input type="text" asp-for="nome"></input>
+    <br><br>
+    <label asp-for="email">
+        Email:
+    </label>
+    <input type="text"  asp-for="email"></input></center>
+    <br><br>
+    <center><label asp-for="mensagem">
+        Mensagem:
+    </label>
+    <input type="text" class="message" asp-for="mensagem"></input></center></span></center>
+
+    <br><br>
+    <center><button>Envia a mensagem</button></center>
+
+</form>

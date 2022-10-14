@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="iconbar">
+	<a asp-area="" asp-controller="Home" asp-action="Index" class="active"><img width ="35px" height="35px" src="~/home.png">  Home</a>
+	<a asp-area="" asp-controller="Home" asp-action="Pavao" ><img width ="35px" height="35px" src="~/pavao.png">  Pavões</a>
+	<a asp-area="" asp-controller="Home" asp-action="Ganso"><img width ="35px" height="35px" src="~/goose.png">  Gansos</a>
+	<a asp-area="" asp-controller="Home" asp-action="Garnize"><img width ="35px" height="35px" src="~/rooster.png">  Garnizés</a>
+	<a asp-area="" asp-controller="Home" asp-action="FaleConosco"><img width ="35px" height="35px" src="~/message.png">  Fale Conosco</a>
+	<a asp-area="" asp-controller="Home" asp-action="Message"><img width ="35px" height="35px" src="~/sent.png">  Recebidas</a>
+</div>
+
+<body  onLoad="passa1()">
+  
+<br><br><br><br>
+<center>
+	<img  id="imgid" width="500px" height="350px" />
+</center>
+<br><nr>
+<center><p>Nós somos uma empresa que busca espalhar a sensanção de alegria da criação de animais para as outras pessoas.Vendendo diferentes tipos de animais para outras pessoas. </p></center>
+
+
+
+</body>
+<script>
+
+function passa1(){
+
+document.getElementById('imgid').src="img1.jpeg";
+setTimeout("passa2()", 5000)
+
+
+}
+
+function passa2(){
+
+document.getElementById('imgid').src="img2.jpeg";
+setTimeout("passa3()", 5000)
+
+
+}
+
+function passa3(){
+
+document.getElementById('imgid').src="img3.jpeg";
+setTimeout("passa1()", 5000)
+
+
+}
+
+</script>

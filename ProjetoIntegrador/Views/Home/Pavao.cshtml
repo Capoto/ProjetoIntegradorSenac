@@ -1,0 +1,161 @@
+<div class="iconbar">
+	<a asp-area="" asp-controller="Home" asp-action="Index" ><img width ="35px" height="35px" src="~/home.png">  Home</a>
+	<a asp-area="" asp-controller="Home" asp-action="Pavao" class="active"><img width ="35px" height="35px" src="~/pavao.png"> Pavões</a>
+	<a asp-area="" asp-controller="Home" asp-action="Ganso"><img width ="35px" height="35px" src="~/goose.png">  Gansos</a>
+	<a asp-area="" asp-controller="Home" asp-action="Garnize"><img width ="35px" height="35px" src="~/rooster.png">  Garnizés</a>
+	<a asp-area="" asp-controller="Home" asp-action="FaleConosco"><img width ="35px" height="35px" src="~/message.png">  Fale Conosco</a>
+  <a asp-area="" asp-controller="Home" asp-action="Message"><img width ="35px" height="35px" src="~/sent.png">  Recebidas</a>
+</div>
+
+<br><center><h1 class="heitor">Pavões</h1></center><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="~/fotosPavao/Pavao1.jpeg" width = "500px" height="350px" style="width:100%">
+  <div class="text">Fotos de Pavões</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="~/fotosPavao/Pavao2.jpeg" width = "500px" height="350px" style="width:100%">
+  <div class="text">Fotos de Pavões</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="~/fotosPavao/Pavao3.jpeg" width = "500px" height="350px" style="width:100%">
+  <div class="text">Fotos de Pavões</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="~/fotosPavao/Pavao4.jpeg"  width = "500px" height="350px" style="width:100%">
+  <div class="text">Fotos de Pavões</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+<br>
+<center><p>Fácil de lidar, o pavão é dócil e adapta-se bem à vida no cativeiro quando o manejo é adequado. Pode ser criado em espaço pequeno, desde que o local tenha tamanho suficiente para ele se movimentar. Além de ser de grande porte, a ave possui uma cauda longa.
+  As aves vivem até 16 anos, mas a reprodução é boa até o sexto ano de vida
+  O produtor não tem muita preocupação com a saúde do pavão, pois, como ele é bastante resistente, dificilmente adoece. No entanto, é recomendado manter o viveiro sempre higienizado, com água limpa e fresca disponível para as aves, que vivem, em média, 16 anos. A reprodução, no entanto, é boa até os 6 anos de idade.</p>
+</center>
+<br>
+<div class="slidevideo-container">
+<center><h1 class="heitor">Vídeos</h1></center>
+<div class="myVideos fade">
+	<div class="numbertext_videos">1 / 3</div>
+	<video id="player1" controls width="500px" height="350px"  >
+		<source src="~/fotosPavao/Pavao1.mp4" type="video/mp4">
+		<source src="~/fotosPavao/Pavao1.ogg" type="video/ogg">
+		<source src="~/fotosPavao/Pavao1.webm" type="video/webm">
+	</video>
+</div>
+<div class="myVideos fade">
+	<div class="numbertext_videos">2 / 3</div>
+	<video id="player2" controls width="500px" height="350px"  >
+		<source src="~/fotosPavao/Pavao2.mp4" type="video/mp4">
+		<source src="~/fotosPavao/Pavao2.ogg" type="video/ogg">
+		<source src="~/fotosPavao/Pavao2.webm" type="video/webm">
+	</video>
+</div>
+<div class="myVideos fade">
+	<div class="numbertext_videos">3 / 3</div>
+	<video id="player3"  controls width="500px" height="350px"  >
+		<source src="~/fotosPavao/Pavao3.mp4" type="video/mp4">
+		<source src="~/fotosPavao/Pavao3.ogg" type="video/ogg">
+		<source src="~/fotosPavao/Pavao3.webm" type="video/webm">
+	</video>
+</div>
+
+<a class="prev_videos" onclick="plusSlidest(-1)">❮</a>
+<a class="next_videos" onclick="plusSlidest(1)">❯</a>
+</div>
+<div style="text-align:center">
+  <span class="dotk" onclick="currentSlidet(1)"></span> 
+  <span class="dotk" onclick="currentSlidet(2)"></span> 
+  <span class="dotk" onclick="currentSlidet(3)"></span> 
+</div>
+<br><br><br><br><br>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<script>
+let slidevideos = 1;
+showVideos(slidevideos);
+
+function plusSlidest(n) {
+  showVideos(slidevideos += n);
+}
+
+function currentSlidet(n) {
+  showVideos(slidevideos = n);
+}
+
+function showVideos(n) {
+  let i;
+  let slides = document.getElementsByClassName("myVideos");
+  let dots = document.getElementsByClassName("dotk");
+  if (n > slides.length) {slidevideos = 1}    
+  if (n < 1) {slidevideos = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slidevideos-1].style.display = "block";  
+  dots[slidevideos-1].className += " active";
+
+
+  //Pausar video do slide
+  const video1 = document.querySelector("#player1");
+  const video2 = document.querySelector("#player2");
+  const video3 = document.querySelector("#player3");
+  video1.pause();
+  video1.currentTime = 0;
+  video2.pause();
+  video2.currentTime = 0;
+  video3.pause();
+  video3.currentTime = 0;
+}
+
+
+
+</script>
