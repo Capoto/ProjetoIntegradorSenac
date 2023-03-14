@@ -1,4 +1,43 @@
 @model List<Faleconosco>
+<style>
+.pagination {
+  display: inline-block;
+}
+ul {
+    list-style-type: none;
+
+}
+.alert{
+    color: yellow;
+}
+
+.normal{
+    color: green;
+}
+
+.pagination li {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.pagination li.active {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+
+
+
+
+.pagination li:hover:not(.active) {background-color: #ddd;}
+</style>
 <div class="iconbar">
 	<a asp-area="" asp-controller="Home" asp-action="Index"><img width ="35px" height="35px" src="~/home.png">  Home</a>
 	<a asp-area="" asp-controller="Home" asp-action="Pavao"><img width ="35px" height="35px" src="~/pavao.png">  Pavões</a>
@@ -8,10 +47,24 @@
     <a asp-area="" asp-controller="Home" asp-action="Message" class="active"><img width ="35px" height="35px" src="~/sent.png"> Recebidas</a>
 </div>
 
-<br><br><br><center><h1 class="heitor">Mensagem recebidas</h1></center><br>
+<br><br><center><h1 class="heitor">Mensagem recebidas</h1></center>
 <center>
 
-	<table>
+		<center><h2>Escolha o número de linhas</h2></center>
+				<div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+			 		<select class  ="form-control" name="state" id="maxRows">
+						 <option value="5000">Mostra todas as linhas</option>
+						 <option value="5">5</option>
+                         <option value="10">10</option>
+						 <option value="15">15</option>
+						 <option value="20">20</option>
+						 <option value="50">50</option>
+						 <option value="70">70</option>
+						 <option value="100">100</option>
+						</select>
+			 		
+	<br><br>		  
+	<table id="Livro">
 	
 		<thead>
 
@@ -40,3 +93,27 @@
 	</table>
 
 </center>
+
+<center>
+<div class='pagination' >
+				<nav>
+				  <ul>
+            
+            <li data-page="prev" >
+								     <span> < <span class="sr-only">(current)</span></span>
+								    </li>
+				   <!--	Here the JS Function Will Add the Rows -->
+        <li data-page="next" id="prev">
+								       <span> > <span class="sr-only">(current)</span></span>
+								    </li>
+				  </ul>
+				</nav>
+			</div>
+
+</div></center> 
+
+
+ 
+				
+
+<br><br><br><br><br>

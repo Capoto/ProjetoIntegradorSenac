@@ -22,7 +22,7 @@
 <br><center><h1 class="heitor12">Fale Conosco</h1></center>
 <center>
     <div class="divform">
-        <form method="Post">
+        <form id="testando" method="Post">
             <br>
             <span><label asp-for="nome">
                 Nome:
@@ -33,8 +33,8 @@
             <label asp-for="email">
             Email:
             </label>
-            <input type="text"  asp-for="email" required></input>
-            <br><br>
+            <input type="text"  asp-for="email" onkeyup="verificaemail()" required></input>
+            <br><span id="sign2"></span><br>
         <center><label asp-for="mensagem">
             Mensagem:
         </label>
@@ -47,3 +47,5 @@
 </div>
 </center>
 <br><br><br><br><br>
+
+
