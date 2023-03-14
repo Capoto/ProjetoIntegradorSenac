@@ -6,10 +6,15 @@
     <title>ProjetoIntegrador</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
+
  
-    
+
+
+</head>
+<body onload="myFunction();getPagination('#Livro');passa1();">
+ 
+    <div id="loader"></div>
+        <div style="display:none;" id="myDiv" class="animate-bottom">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -25,4 +30,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
+</div>
 </html>
